@@ -5,52 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Input Biodata</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .container {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .form-control {
+        border-radius: 4px;
+      }
+      .btn {
+        border-radius: 4px;
+      }
+      h2 {
+        color: #343a40;
+      }
+    </style>
   </head>
   <body>
-    <div class="container mt-5 p-5 border">
+    <div class="container mt-5 p-5">
       <h2 class="text-center mb-4">Input Biodata</h2>
       <form>
         <div class="form-group row">
           <label for="nama" class="col-sm-2 col-form-label">Nama</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="nama" />
+            <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda" required />
           </div>
         </div>
         <div class="form-group row">
           <label for="NPM" class="col-sm-2 col-form-label">NPM</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="NPM" />
+            <input type="text" class="form-control" id="NPM" placeholder="Masukkan NPM Anda" required />
           </div>
         </div>
         <div class="form-group row">
           <label for="tanggalLahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="tanggalLahir" />
+            <input type="date" class="form-control" id="tanggalLahir" required />
           </div>
         </div>
         <div class="form-group row">
           <label for="jenisKelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="jenisKelamin" />
+            <select class="form-control" id="jenisKelamin" required>
+              <option value="">Pilih jenis kelamin</option>
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select>
           </div>
         </div>
         <div class="form-group row">
           <label for="alamat" class="col-sm-2 col-form-label">Alamat</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="alamat" />
+            <textarea class="form-control" id="alamat" rows="3" placeholder="Masukkan alamat Anda" required></textarea>
           </div>
         </div>
         <div class="form-group row">
           <label for="agama" class="col-sm-2 col-form-label">Agama</label>
           <div class="col-sm-10">
-            <select class="form-control" id="agama">
-              <option></option>
-              <option>Katholik</option>
-              <option>Kristen</option>
-              <option>Islam</option>
-              <option>Hindu</option>
-              <option>Buddha</option>
-              <option>Konghucu</option>
+            <select class="form-control" id="agama" required>
+              <option value="">Pilih agama</option>
+              <option value="Katholik">Katholik</option>
+              <option value="Kristen">Kristen</option>
+              <option value="Islam">Islam</option>
+              <option value="Hindu">Hindu</option>
+              <option value="Buddha">Buddha</option>
+              <option value="Konghucu">Konghucu</option>
             </select>
           </div>
         </div>
